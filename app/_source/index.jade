@@ -1,0 +1,24 @@
+doctype html
+
+html
+	head
+		title Jade
+
+		//inline
+		link(rel="stylesheet", href="css/abouve-default.css", inline)
+		//endbuild
+
+	body
+		//- template header
+		include templates/header/header-template.jade 
+
+		
+
+		//- scripts
+		//build:js vendor/cssrelpreload.js async
+		script(src="../vendor/cssrelpreload.js", async)
+		//endbuild
+
+		//build:js vendor/loadcss.js async
+		script(src="../vendor/loadcss.js", async)
+		//endbuild

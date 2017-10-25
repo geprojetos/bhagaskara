@@ -1,0 +1,58 @@
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Open_Sans";
+	src: url("fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf");
+}
+
+$font-title: "Roboto", "Arial", "Verdana", "Helvetica", "Times", "New Roman";
+$font-subTitle: "Open_Sans", "Arial", "Verdana", "Helvetica", "Times", "New Roman";
+$font-text: "Open_Sans", "Arial", "Verdana", "Helvetica", "Times", "New Roman";
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-title, "sans-serif";
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 3em; /*48px*/
+}
+
+h2 {
+	font-size: 2.6em; /*42px*/
+}
+
+h3 {
+	font-size: 2.25em; /*36px*/
+}
+
+h4 {
+	font-size: 1.8em; /*30px*/
+}
+
+h5 {
+	font-size: 1.5em; /*24px*/
+}
+
+h6 {
+	font-size: 1.3em; /*22px*/
+}
+
+p,
+a,
+span,
+input,
+label,
+textarea {
+	font-family: $font-text, "sans-serif";
+	font-size: 1.3em; /*22px*/
+}
