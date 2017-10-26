@@ -1,1 +1,31 @@
-p menu header
+nav.header__menu
+	ul.header__menu__lista
+		li.header__menu__item.header__item__down
+			span.icon-svg
+			a.header__menu__link(href="#", title="Ir para sobre") sobre
+
+		li.header__menu__item.header__item__down
+			span.icon-user
+			a.header__menu__link(href="#", title="Ir para time") time
+
+		li.header__menu__item
+			span.icon-bubble2
+			a.header__menu__link(href="#", title="Ir para serviços") serviços
+
+		li.header__menu__item
+			span.icon-file-text
+			a.header__menu__link(href="#", title="Ir para portfolio") portfolio
+
+		li.header__menu__item.header__item__down
+			span.icon-pencil2
+			a.header__menu__link(href="#", title="Ir para blog") blog
+
+		li.header__menu__item.header__item__down
+			span.icon-envelop
+			a.header__menu__link(href="#", title="Ir para contato") contato
+
+
+
+div.header__wrapper__iconDown
+	a.header__icon--down.tooltip(href="#", data-tooltip="Ir para sobre")
+		span.icon-circle-down

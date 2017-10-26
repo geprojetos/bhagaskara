@@ -1,19 +1,24 @@
 doctype html
 
-html
+html(lang="pt-br")
 	head
-		title Jade
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="description", content="Página criada somente para estudos e criação de portfolio")
+		title Bkagaskara
 
 		//inline
 		link(rel="stylesheet", href="css/abouve-default.css", inline)
 		//endbuild
+		link(rel="preload", href="fonts/Roboto/Roboto-Regular.ttf", as="font", type="font/ttf")
+		link(rel="preload", href="fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf", as="font", type="font/ttf")
 
 	body
 		//- template header
 		include templates/header/header-template.jade 
 
 		
-		span.icon-pencil2
+		
 		//- scripts
 		//build:js vendor/cssrelpreload.js async
 		script(src="../vendor/cssrelpreload.js", async)

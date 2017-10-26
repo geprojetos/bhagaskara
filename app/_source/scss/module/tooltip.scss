@@ -1,0 +1,31 @@
+.tooltip {
+
+	@media #{$medium} {
+
+		position: relative;
+		transition: all .5s ease-in-out;
+
+		&:hover:before {
+			background: black;
+			bottom: 70px;
+			content: "";
+			height: 1em;
+			position: absolute;
+			transform: translate(15%, 40%) rotate(45deg);
+			width: 1em;
+		}
+
+		&:hover:after {
+			background: black;
+			border-radius: .5em;
+			content: attr(data-tooltip);
+			font-size: .6em;
+			position: absolute;
+			right: 50%;
+			text-align: center;
+			top: -150%;
+			transform: translateX(50%);
+			width: 300%;
+		}
+	}
+}
