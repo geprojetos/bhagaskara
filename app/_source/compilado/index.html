@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página criada somente para estudos e criação de portfolio">
     <title>Bkagaskara</title>
-    <!--inline-->
-    <!--endbuild-->
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="preload" href="fonts/Roboto/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" href="fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" as="image" href="img/destaque-header-small.jpeg" media="(min-width:400px)">
+    <link rel="preload" as="image" href="img/destaque-header-medium.jpeg" media="(min-width:768px)">
+    <link rel="preload" as="image" href="img/destaque-header-large.jpeg" media="(min-width:1024px)">
     <link rel="stylesheet" href="css/abouve-default.css" inline>
+    <!--build:css css/style.css rel="preload" as="style" onload="this.rel='stylesheet'"-->
+    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+    <!--endbuild-->
+    <noscript>
+      <link rel="stylesheet" href="css/style.css">
+    </noscript>
   </head>
   <body>
     <header class="header">
@@ -18,21 +25,30 @@
         <div class="header__wrapper__titles">
           <h1 class="header__title title__color--primary">Bhagas<span class="title__color--secondary">kara</span></h1>
           <h2 class="header__subtitle">Fusce rutrum pretium lorem semper nulla</h2>
-          <p class="header__description">Lorem ipsum is a pseudo-Latin text used in web design, typography, layout</p>
         </div>
         <nav class="header__menu">
           <ul class="header__menu__lista">
-            <li class="header__menu__item header__item__down"><span class="icon-svg"></span><a href="#" title="Ir para sobre" class="header__menu__link">sobre</a></li>
-            <li class="header__menu__item header__item__down"><span class="icon-user"></span><a href="#" title="Ir para time" class="header__menu__link">time</a></li>
-            <li class="header__menu__item"><span class="icon-bubble2"></span><a href="#" title="Ir para serviços" class="header__menu__link">serviços</a></li>
-            <li class="header__menu__item"><span class="icon-file-text"></span><a href="#" title="Ir para portfolio" class="header__menu__link">portfolio</a></li>
-            <li class="header__menu__item header__item__down"><span class="icon-pencil2"></span><a href="#" title="Ir para blog" class="header__menu__link">blog</a></li>
-            <li class="header__menu__item header__item__down"><span class="icon-envelop"></span><a href="#" title="Ir para contato" class="header__menu__link">contato</a></li>
+            <li title="Ir para sobre" class="header__menu__item header__item__down"><span class="icon-svg"></span><a href="#" class="header__menu__link">sobre</a></li>
+            <li title="Ir para time" class="header__menu__item header__item__down"><span class="icon-user"></span><a href="#" class="header__menu__link">time</a></li>
+            <li title="Ir para serviços" class="header__menu__item"><span class="icon-bubble2"></span><a href="#" class="header__menu__link">serviços</a></li>
+            <li title="Ir para portfolio" class="header__menu__item"><span class="icon-file-text"></span><a href="#" class="header__menu__link">portfolio</a></li>
+            <li title="Ir para blog" class="header__menu__item header__item__down"><span class="icon-pencil2"></span><a href="#" class="header__menu__link">blog</a></li>
+            <li title="Ir para contato" class="header__menu__item header__item__down"><span class="icon-envelop"></span><a href="#" class="header__menu__link">contato</a></li>
           </ul>
         </nav>
-        <div class="header__wrapper__iconDown"><a href="#" data-tooltip="Ir para sobre" class="header__icon--down tooltip"><span class="icon-circle-down"></span></a></div>
+        <div class="header__wrapper__iconDown"><a href="#submenu" data-tooltip="Ir para sobre" class="header__icon--down tooltip"><span class="icon-circle-down"></span></a></div>
       </div>
     </header>
+    <nav id="submenu" class="submenu__nav">
+      <ul class="submenu__lista">
+        <li class="submenu__item"><a href="#" title="Ir para sobre" class="submenu__link">sobre</a></li>
+        <li class="submenu__item"><a href="#" title="Ir para time" class="submenu__link">time</a></li>
+        <li class="submenu__item"><a href="#" title="Ir para serviços" class="submenu__link">serviços</a></li>
+        <li class="submenu__item"><a href="#" title="Ir para portfolio" class="submenu__link">portfolio</a></li>
+        <li class="submenu__item"><a href="#" title="Ir para blog" class="submenu__link">blog</a></li>
+        <li class="submenu__item"><a href="#" title="Ir para contato" class="submenu__link">contato</a></li>
+      </ul>
+    </nav>
     <!--build:js vendor/cssrelpreload.js async-->
     <script src="../vendor/cssrelpreload.js" async></script>
     <!--endbuild-->

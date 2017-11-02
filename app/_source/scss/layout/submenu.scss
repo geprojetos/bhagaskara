@@ -1,0 +1,35 @@
+.submenu__nav {
+	background: $white-two-dark;
+	padding: .5em;
+}
+
+.submenu__lista {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.submenu__item {
+	min-width: 100px;
+	padding: .1em;
+}
+
+.submenu__link {
+	background: $purple-one-light;
+	border-radius: .5em;
+	color: $white-two-dark;
+	display: block;
+	padding: .8em .5em;
+	text-align: center;
+
+	@media #{$medium} {
+		background: none;
+		color: $gray-one;
+		transition: all .5s ease-in-out;
+
+		&:hover {
+			background: $purple-two-dark;
+			color: $white-two-dark;
+		}
+	}
+}

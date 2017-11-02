@@ -7,16 +7,28 @@ html(lang="pt-br")
 		meta(name="description", content="Página criada somente para estudos e criação de portfolio")
 		title Bkagaskara
 
-		//inline
-		//endbuild
+		
 		link(rel="shortcut icon" href="img/favicon.png")
 		link(rel="preload", href="fonts/Roboto/Roboto-Regular.ttf", as="font", type="font/ttf", crossorigin="anonymous")
 		link(rel="preload", href="fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf", as="font", type="font/ttf", crossorigin="anonymous")
+		link(rel="preload", as="image", href="img/destaque-header-small.jpeg", media="(min-width:400px)")
+		link(rel="preload", as="image", href="img/destaque-header-medium.jpeg", media="(min-width:768px)")
+		link(rel="preload", as="image", href="img/destaque-header-large.jpeg", media="(min-width:1024px)")
+
 		link(rel="stylesheet", href="css/abouve-default.css", inline)
+
+		//build:css css/style.css rel="preload" as="style" onload="this.rel='stylesheet'"
+		link(rel="preload", href="css/style.css", as="style", onload="this.rel='stylesheet'")
+		//endbuild
+		noscript
+			link(rel="stylesheet", href="css/style.css")
 
 	body
 		//- template header
 		include templates/header/header-template.jade 
+
+		//- submenu
+		include templates/submenu/submenu-template.jade
 
 		
 		

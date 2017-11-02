@@ -142,7 +142,7 @@ gulp.task("build-vendor", function(){
 
     gulp.src("../app/_source/vendor/*.js")
     .pipe(uglify())
-    .pipe(gulp.dest("../app/_public/vendor"));
+    .pipe(gulp.dest("../app/_public/vendor"))
 });
 
 

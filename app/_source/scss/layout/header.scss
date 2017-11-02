@@ -17,7 +17,20 @@ body,
 
 .header {
 	background: $purple-one-light;
+	background-image: url("img/destaque-header-small.jpeg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 	position: relative;
+
+
+	@media (min-width: 400px) {
+		background-image: url("img/destaque-header-medium.jpeg");
+	}
+
+	@media #{$large} {
+		background-image: url("img/destaque-header-large.jpeg");
+	}
 }
 
 .header__wrapper__titles {
@@ -26,7 +39,9 @@ body,
 }
 
 .header__title {
+	color: $purple-one-light;
 	padding: .2em;
+	text-shadow: 1px 1px 1px $white-two-dark;
 
 	span {
 		color: $purple-two-dark;
@@ -36,9 +51,11 @@ body,
 }
 
 .header__subtitle {
+	color: rgb(96, 125, 139);
 	font-size: 1.5em;
 	font-weight: normal;
 	margin-bottom: .5em;
+    text-shadow: 1px 0px 0px $white-one-light;
 }
 
 
@@ -47,7 +64,7 @@ body,
 
 	margin-top: .5em;
 
-	@media #{$medium} {
+	@media (min-width: 500px) {
 	    left: 50%;
 	    margin-top: auto;
 		position: absolute;
@@ -71,12 +88,11 @@ body,
 }
 
 .header__menu__item {
-
-	background: rgba(255, 255, 255, .2);
+	background: rgba(95, 56, 137, .9);
 	border: 2px solid rgba(255, 255, 255, 0);
-	border-radius: 100%;
+	border-radius: .5em;
 	margin: .2em;
-	padding: 1.5em 1em;
+	padding: 1em 1.6em;
 	transition: all .5s;
 	width: 100px;
 
@@ -86,11 +102,12 @@ body,
 
 	.header__menu__link {
 		display: block;
+		font-size: 1.1em;
 	}
 
 	@media #{$medium} {
-
-		width: 114px;
+		border-radius: 100%;
+		width: 118px;
 
 		&:hover {
 			background: $purple-two-dark;
@@ -99,8 +116,14 @@ body,
 	}
 
 	@media #{$large} {
-		width: 130px;
+		padding: 1.2em 1.6em;
+		width: 136px;
 	}
+}
+
+.header__menu__item span {
+	font-size: 2.2em;
+	margin-bottom: .2em;
 }
 
 .header__wrapper__iconDown {
