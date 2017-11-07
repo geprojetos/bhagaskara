@@ -40,7 +40,7 @@ h5 { font-size: 1.5em; /*24px*/ }
 
 h6 { font-size: 1.3em; /*22px*/ }
 
-p, a, span, input, label, textarea { font-family: "Open_Sans", "Arial", "Verdana", "Helvetica", "Times", "New Roman", "sans-serif"; font-size: 1.3em; /*22px*/ line-height: 1.5em; }
+p, a, span, input, label, textarea, button { font-family: "Open_Sans", "Arial", "Verdana", "Helvetica", "Times", "New Roman", "sans-serif"; font-size: 1.3em; /*22px*/ line-height: 1.5em; }
 
 @font-face { font-family: 'icomoon'; src: url("fonts/icomoon/fonts/icomoon.eot?8ry46q"); src: url("fonts/icomoon/fonts/icomoon.eot?8ry46q#iefix") format("embedded-opentype"), url("fonts/icomoon/fonts/icomoon.ttf?8ry46q") format("truetype"), url("fonts/icomoon/fonts/icomoon.woff?8ry46q") format("woff"), url("fonts/icomoon/fonts/icomoon.svg?8ry46q#icomoon") format("svg"); font-weight: normal; font-style: normal; }
 
@@ -120,12 +120,12 @@ html, body, .header { height: 100%; }
   .tooltip { position: relative; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }
   .tooltip:hover:before { background: black; bottom: 70px; content: ""; height: 1em; position: absolute; -webkit-transform: translate(15%, 40%) rotate(45deg); -ms-transform: translate(15%, 40%) rotate(45deg); transform: translate(15%, 40%) rotate(45deg); width: 1em; }
   .tooltip:hover:after { background: black; border-radius: .5em; content: attr(data-tooltip); font-size: .6em; position: absolute; right: 50%; text-align: center; top: -150%; -webkit-transform: translateX(50%); -ms-transform: translateX(50%); transform: translateX(50%); width: 300%; }
-  html { font-size: 112%; /*18px*/ }
-  .header__menu__item { border-radius: 100%; width: 118px; }
-  .header__menu__item:hover { background: #382d57; border: 2px solid #f1f0f1; }
+  html { font-size: 106%; /*17px*/ }
+  .header__menu__item { padding: 1.2em .5em; border-radius: 100%; width: 118px; }
   .header__item__down { position: relative; top: 100px; } }
 
-@media (min-width: 1024px) { .container { max-width: 1024px; }
-  html { font-size: 125%; /*20px*/ }
+@media (min-width: 1150px) { .container { max-width: 1150px; }
+  html { font-size: 112%; /*18px*/ }
   .header { background-image: url("img/destaque-header-large.jpeg"); }
-  .header__menu__item { padding: 1.2em 1.6em; width: 136px; } }
+  .header__menu__item { padding: 1.5em .5em; width: 136px; }
+  .header__menu__item:hover { background: #382d57; border: 2px solid #f1f0f1; } }

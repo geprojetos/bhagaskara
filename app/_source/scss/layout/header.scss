@@ -1,11 +1,11 @@
 html {
 
 	@media #{$medium} {
-		font-size: 112%; /*18px*/
+		font-size: 106%; /*17px*/
 	}
 
 	@media #{$large} {
-		font-size: 125%; /*20px*/
+		font-size: 112%; /*18px*/
 	}
 }
 
@@ -106,18 +106,19 @@ body,
 	}
 
 	@media #{$medium} {
+		padding: 1.2em .5em;
 		border-radius: 100%;
 		width: 118px;
+	}
+
+	@media #{$large} {
+		padding: 1.5em .5em;
+		width: 136px;
 
 		&:hover {
 			background: $purple-two-dark;
 			border: 2px solid $white-two-dark;
 		}
-	}
-
-	@media #{$large} {
-		padding: 1.2em 1.6em;
-		width: 136px;
 	}
 }
 

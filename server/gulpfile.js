@@ -94,7 +94,7 @@ gulp.task("img", function(){
 
 gulp.task('sprite', function () {
 
-    var spriteData = gulp.src('../app/_source/img/sprite/*.png')
+    var spriteData = gulp.src('../app/_source/img/sprites/*.png')
         .pipe(sprite({
             imgName: 'sprite.png',  //nome sprite gerado
             cssName: 'sprite.css'   // nome css do sprite

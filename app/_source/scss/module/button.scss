@@ -1,0 +1,21 @@
+.button--primary {
+
+	background: $purple-one-light;
+	border: none;
+	border-radius: .4em;
+	color: $white-one-light;
+	cursor: pointer;
+	display: block;
+	padding: .6em;
+	text-align: center;
+	transition: all .4s ease-in-out;
+	width: 100%;
+
+	@media #{$large} {
+
+		&:hover {
+			background: $purple-two-dark;
+		}
+	}
+
+}

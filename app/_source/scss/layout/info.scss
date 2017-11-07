@@ -1,0 +1,41 @@
+.info {
+	background: $gray-two;
+}
+
+.info .container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: .5em;
+}
+
+
+.info__block {
+	margin: .5em auto;
+	max-width: 280px;
+	text-align: center;
+
+	@media #{$large} {
+		padding: .5em;
+	}
+}
+
+.info__icon {
+	background: $white-one-light;
+	border: 2px solid $purple-one-light;
+	border-radius: 100%;
+	color: $purple-one-light;
+	display: inline-block;
+	font-size: 4em;
+	margin: .3em;
+	padding: .5em;
+}
+
+.info__title,
+.info__description {
+	color: $gray-one;
+}
+
+.info__title {
+	margin-bottom: .5em;
+	font-size: 1.8em;
+}
