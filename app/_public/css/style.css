@@ -22,7 +22,7 @@
 
 .about__title { color: #3a3e40; font-weight: normal; padding: 3em 0; text-align: center; }
 
-.about__title:before, .about__title:after { content: " '' "; color: #5f3889; }
+.about__title:before, .about__title:after { content: "''"; color: #5f3889; }
 
 .about__content__image img { width: 100%; }
 

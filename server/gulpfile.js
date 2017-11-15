@@ -10,6 +10,7 @@ var gulp            = require("gulp"),
     mmq             = require('gulp-merge-media-queries'),
     inlinesource    = require('gulp-inline-source'),
     sprite          = require('gulp.spritesmith'),
+    gulpif          = require('gulp-if'),
     jshint          = require("gulp-jshint"),
     jsStylish       = require("jshint-stylish"),
     uglify          = require("gulp-uglify");
@@ -32,13 +33,13 @@ gulp.task("server", function(){
     gulp.watch("../app/_public/**/*").on("change", browserSync.reload);
     gulp.watch("../app/_source/**/*.jade", ["jade"]);
     gulp.watch("../app/_source/**/*.scss", ["sass"]);
-    gulp.watch("../app/_source/js/*.js", ["js"]);
+    // gulp.watch("../app/_source/js/*.js", ["js"]);
     gulp.watch("../app/_source/img/*", ["img"]);
     gulp.watch("../app/_source/img/sprite/*.png", ["sprite"]);
 
     gulp.watch("../app/_source/compilado/*.html", ["build-html"]);
     gulp.watch("../app/_source/compilado/css/*.css", ["build-css", "build-html"]);
-    gulp.watch("../app/_source/compilado/js/*.js", ["build-js", "build-html"]);
+    gulp.watch("../app/_source/js/*.js", ["build-js", "build-html"]);
     gulp.watch("../app/_source/vendor/*.js", ["build-vendor", "build-html"]);
     
     gulp.watch("../server/gulpfile.js", ["build-html", "build-css", "build-js"]);
@@ -74,15 +75,15 @@ gulp.task("sass", function(){
 });
 
 
-gulp.task("js", function(){
+// gulp.task("build-js", function(){
 
-    gulp.src("../app/_source/js/*.js")
-        .pipe(jshint())
-        .pipe(jshint.reporter(jsStylish))
-        .pipe(plumber())
-        .pipe(uglify())
-        .pipe(gulp.dest("../app/_source/compilado/js"))
-});
+//     gulp.src("../app/_source/js/*.js")
+//         .pipe(jshint())
+//         .pipe(jshint.reporter(jsStylish))
+//         .pipe(plumber())
+//         .pipe(uglify())
+//         .pipe(gulp.dest("../app/_source/compilado/js"))
+// });
 
 
 gulp.task("img", function(){
@@ -109,6 +110,7 @@ gulp.task("build-html", function(){
     gulp.src("../app/_source/compilado/*.html")
         .pipe(useref())
         .pipe(inlinesource())
+        .pipe(gulpif('*.js', uglify()))
         .pipe(gulp.dest("../app/_public"))
 });
 
@@ -123,11 +125,12 @@ gulp.task("build-css", function(){
 
 gulp.task("build-js", function(){
 
-    gulp.src("../app/_source/compilado/js/*.js")
+    return gulp.src("../app/_source/js/*.js")
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
         .pipe(plumber())
         .pipe(uglify())
+        .pipe(gulp.dest("../app/_source/compilado/js"))
 });
 
 
@@ -146,7 +149,7 @@ gulp.task("build-vendor", function(){
 });
 
 
-gulp.task("comp", ["jade", "sass", "js"]);
+gulp.task("comp", ["jade", "sass"]);
 
 gulp.task("images", ["img", "sprite"]);
 

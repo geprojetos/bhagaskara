@@ -110,7 +110,7 @@ html, body, .header { height: 100%; }
 
 .header__wrapper__iconDown { bottom: .1em; left: 50%; position: absolute; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 
-.header__icon--down { font-size: 1.8em; }
+.header__icon--down { text-shadow: 0 0 10px #3a3e40; font-size: 1.8em; }
 
 @media (min-width: 400px) { .header { background-image: url("img/destaque-header-medium.jpeg"); } }
 
