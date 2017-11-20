@@ -88,6 +88,8 @@ html, body, .header { height: 100%; }
 
 .header__wrapper__titles { text-align: center; color: #f1f0f1; }
 
+.header__link__logo { font-size: inherit; }
+
 .header__title { color: #5f3889; padding: .2em; text-shadow: 1px 1px 1px #f1f0f1; }
 
 .header__title span { color: #382d57; font-family: "Roboto", "Arial", "Verdana", "Helvetica", "Times", "New Roman"; font-size: 1em; }

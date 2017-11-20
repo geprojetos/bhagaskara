@@ -1,0 +1,46 @@
+.header {
+	background: $purple-one-light;
+	background-image: url("img/destaque-header-small.jpeg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+
+	@media (min-width: 400px) {
+		background-image: url("img/destaque-header-medium.jpeg");
+	}
+
+	@media #{$large} {
+		background-image: url("img/destaque-header-large.jpeg");
+	}
+}
+
+.header__wrapper__titles {
+	text-align: center;
+	color: $white-two-dark;
+}
+
+.header__link__logo {
+	font-size: inherit;
+}
+
+.header__title {
+	color: $purple-one-light;
+	padding: .2em;
+	text-shadow: 1px 1px 1px $white-two-dark;
+
+	span {
+		color: $purple-two-dark;
+		font-family: $font-title;
+		font-size: 1em;
+	}
+}
+
+.header__subtitle {
+	color: $gray-three;
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-bottom: .5em;
+    text-shadow: 1px 0px 0px $white-one-light;
+}

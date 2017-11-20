@@ -1,0 +1,16 @@
+html {
+
+	@media #{$medium} {
+		font-size: 106%; /*17px*/
+	}
+
+	@media #{$large} {
+		font-size: 112%; /*18px*/
+	}
+}
+
+html,
+body,
+.header {
+	height: 100%;
+}
