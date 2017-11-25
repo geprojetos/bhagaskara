@@ -21,4 +21,6 @@ window.onscroll = function(){
             imgs[i].src = imgs[i].getAttribute('data-src');
         }
     }
+
+    sizeView();
 };

@@ -17,8 +17,22 @@
 }
 
 .header__wrapper__titles {
-	text-align: center;
+	background: $rgba-white;
+	border-radius: 1em;
 	color: $white-two-dark;
+    left: 50%;
+	position: absolute;
+	text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @media #{$medium} {
+	    padding: .5em;
+    	position: static;
+	    margin: 0 auto;
+	    transform: translate(0,0);
+	    width: 500px;
+    }
 }
 
 .header__link__logo {
@@ -28,7 +42,7 @@
 .header__title {
 	color: $purple-one-light;
 	padding: .2em;
-	text-shadow: 1px 1px 1px $white-two-dark;
+	// text-shadow: 1px 1px 1px $white-two-dark;
 
 	span {
 		color: $purple-two-dark;
@@ -38,9 +52,9 @@
 }
 
 .header__subtitle {
-	color: $gray-three;
+	color: $gray-one;
 	font-size: 1.5em;
 	font-weight: normal;
 	margin-bottom: .5em;
-    text-shadow: 1px 0px 0px $white-one-light;
+    // text-shadow: 1px 0px 0px $white-one-light;
 }

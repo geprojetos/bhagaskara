@@ -80,23 +80,23 @@ p, a, span, input, label, textarea, button { font-family: "Open_Sans", "Arial", 
 
 .icon-svg:before { content: "\eae9"; }
 
-.container { margin-left: auto; margin-right: auto; }
+.container { margin-left: auto; margin-right: auto; padding: .5em; }
 
 html, body, .header { height: 100%; }
 
 .header { background: #5f3889; background-image: url("img/destaque-header-small.jpeg"); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; position: relative; }
 
-.header__wrapper__titles { text-align: center; color: #f1f0f1; }
+.header__wrapper__titles { background: rgba(255, 255, 255, 0.8); border-radius: 1em; color: #f1f0f1; left: 50%; position: absolute; text-align: center; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 .header__link__logo { font-size: inherit; }
 
-.header__title { color: #5f3889; padding: .2em; text-shadow: 1px 1px 1px #f1f0f1; }
+.header__title { color: #5f3889; padding: .2em; }
 
 .header__title span { color: #382d57; font-family: "Roboto", "Arial", "Verdana", "Helvetica", "Times", "New Roman"; font-size: 1em; }
 
-.header__subtitle { color: #607d8b; font-size: 1.5em; font-weight: normal; margin-bottom: .5em; text-shadow: 1px 0px 0px #fff; }
+.header__subtitle { color: #3a3e40; font-size: 1.5em; font-weight: normal; margin-bottom: .5em; }
 
-.header__menu { margin-top: .5em; }
+.header__menu { display: none; }
 
 .header__menu__item, .header__menu__link, .header__icon--down { color: #f1f0f1; }
 
@@ -116,13 +116,13 @@ html, body, .header { height: 100%; }
 
 @media (min-width: 400px) { .header { background-image: url("img/destaque-header-medium.jpeg"); } }
 
-@media (min-width: 500px) { .header__menu { left: 50%; margin-top: auto; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; } }
-
 @media (min-width: 768px) { .container { max-width: 768px; }
   .tooltip { position: relative; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }
   .tooltip:hover:before { background: black; bottom: 70px; content: ""; height: 1em; position: absolute; -webkit-transform: translate(15%, 40%) rotate(45deg); -ms-transform: translate(15%, 40%) rotate(45deg); transform: translate(15%, 40%) rotate(45deg); width: 1em; }
   .tooltip:hover:after { background: black; border-radius: .5em; content: attr(data-tooltip); font-size: .6em; position: absolute; right: 50%; text-align: center; top: -150%; -webkit-transform: translateX(50%); -ms-transform: translateX(50%); transform: translateX(50%); width: 300%; }
   html { font-size: 106%; /*17px*/ }
+  .header__wrapper__titles { padding: .5em; position: static; margin: 0 auto; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); width: 500px; }
+  .header__menu { display: block; left: 50%; margin-top: auto; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; }
   .header__menu__item { padding: 1.2em .5em; border-radius: 100%; width: 118px; }
   .header__item__down { position: relative; top: 100px; } }
 

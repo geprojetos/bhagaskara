@@ -1,9 +1,10 @@
 // menu
 .header__menu {
 
-	margin-top: .5em;
+	display: none;
 
-	@media (min-width: 500px) {
+	@media #{$medium} {
+		display: block;
 	    left: 50%;
 	    margin-top: auto;
 		position: absolute;
