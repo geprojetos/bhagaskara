@@ -1,16 +1,5 @@
-.about__title {
-	color: $gray-one;
-	font-weight: normal;
-	padding: 3em 0;
-	text-align: center;
-
-	&:before, &:after {
-		content: "''";
-		color: $purple-one-light;
-	}
-}
-
 .about__wrapper {
+	margin-top: 8em;
 
 	@media #{$medium} {
 		display: flex;
@@ -36,12 +25,17 @@
 	@media #{$medium} {
 
 		max-width: 100%;
+		padding: 0;
 		width: 49%;
 	}
 }
 
 .about__content__image {
 	
+	@media #{$medium} {
+		padding-right: .5em;
+	}
+
 	@media #{$large} {
 		width: 60%;
 	}	
@@ -49,11 +43,11 @@
 
 .about__content__description {
 
-
 	@media #{$medium} {
 
 		display: flex;
 		flex-direction: column;
+		padding-left: .5em;
 
 		.about__text {
 			flex-grow: 1;

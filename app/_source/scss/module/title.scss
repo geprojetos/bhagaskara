@@ -1,0 +1,25 @@
+.title__page {
+	background: $purple-one-light;
+	border-radius: .2em;
+	color: $white-one-light;
+	font-weight: normal;
+	padding: .5em 0;
+	text-align: center;
+
+	&:before, &:after {
+		content: "''";
+		color: $white-one-light;
+
+		@media #{$medium} {
+			color: $purple-one-light;
+		}
+	}
+		
+	@media #{$medium} {
+		background: none;
+		border-radius: 0;
+		border-bottom: 4px solid $purple-one-light;
+		color: $purple-one-light;
+		margin-top: 70px;
+	}
+}
