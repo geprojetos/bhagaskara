@@ -48,7 +48,7 @@
           <div class="submenu__close">
             <button title="Fechar menu" class="close__menu"></button>
           </div>
-          <li class="submenu__item"><a href="#about" title="Ir para sobre" class="icon-svg submenu__icon__mobile"></a><a href="#about" title="Ir para sobre" class="submenu__link">sobre</a></li>
+          <li class="submenu__item"><a href="#about" title="Ir para sobre" class="icon-svg submenu__icon__mobile"></a><a href="#about" title="Ir para sobre" class="submenu__link about">sobre</a></li>
           <li class="submenu__item"><a href="#" title="Ir para time" class="icon-user submenu__icon__mobile"></a><a href="#" title="Ir para time" class="submenu__link">time</a></li>
           <li class="submenu__item"><a href="#" title="Ir para serviços" class="icon-bubble2 submenu__icon__mobile"></a><a href="#" title="Ir para serviços" class="submenu__link">serviços</a></li>
           <li class="submenu__item"><a href="#" title="Ir para portfólio" class="icon-file-text submenu__icon__mobile"></a><a href="#" title="Ir para portfólio" class="submenu__link">portfólio</a></li>
@@ -110,12 +110,14 @@
     <!--build:js vendor/loadcss.js async-->
     <script src="../vendor/loadcss.js" async></script>
     <!--endbuild-->
-    <!--build:js js/submenu.js async-->
+    <!--build:js js/onscroll.js async-->
+    <script src="../js/onscroll.js" async></script>
+    <script src="../js/lazyload.js" async></script>
+    <script src="../js/active-menu.js" async></script>
+    <!--endbuild-->
+    <!--build:js js/onresize.js async-->
+    <script src="../js/onresize.js" async></script>
     <script src="../js/submenu.js" async></script>
     <!--endbuild-->
-    <!--build:js js/lazyload.js async-->
-    <script src="../js/lazyload.js" async></script>
-    <!--endbuild-->
-    
   </body>
 </html>

@@ -1,18 +1,4 @@
-var pause = false;
-
-window.onscroll = function(){
-
-	// throttle
-	if(pause) {
-		return;
-	}
-
-	pause = true;
-
-	setTimeout(function(){
-		pause = false;
-	}, 200);
-
+function lazyload(){
 
 	var imgs = document.querySelectorAll('img[data-src]:not([src])');
     
@@ -21,6 +7,4 @@ window.onscroll = function(){
             imgs[i].src = imgs[i].getAttribute('data-src');
         }
     }
-
-    sizeView();
-};
+}

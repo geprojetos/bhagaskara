@@ -1,0 +1,1 @@
+window.onresize=function(){pause||(pause=!0,setTimeout(function(){pause=!1},300),activeMenuFixed(),console.log("resize"))};

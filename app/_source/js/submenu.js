@@ -1,5 +1,10 @@
 (function(){
 
+    openMenuMobile();    
+})();
+
+function openMenuMobile(){
+
     var tagHTML = document.documentElement;
 
     document.querySelector('.submenu__open').onclick = function() {
@@ -15,25 +20,7 @@
             tagHTML.classList.remove('menu__active');
         }
     };
-})();
-
-
-window.onresize = function(){
-
-    // throttle
-    if(pause) {
-        return;
-    }
-
-    pause = true;
-
-    setTimeout(function(){
-        pause = false;
-    }, 300);
-
-    sizeView();
 }
-
 
 function menuFixed() {
 
@@ -50,7 +37,7 @@ function menuFixed() {
     }
 }
 
-function sizeView(){
+function activeMenuFixed(){
 
     var windowWidth = window.innerWidth;
     var submenu = document.querySelector(".submenu__nav");

@@ -48,6 +48,8 @@
 
 .submenu__icon__mobile { background: #fff; border-radius: 100%; color: #5f3889; display: block; padding: .7em; }
 
+.submenu__item__active { background: #fff; color: #5f3889; }
+
 .info { background: #eee; }
 
 .info .container { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: .5em; }

@@ -1,0 +1,1 @@
+var pause=!1;window.onscroll=function(){pause||(pause=!0,setTimeout(function(){pause=!1},200),lazyload(),activeMenuFixed(),activeMenu(),console.log("scroll"))};
