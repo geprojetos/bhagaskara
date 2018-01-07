@@ -1,1 +1,1 @@
-function activeMenu(){var e=document.querySelector("#about");document.querySelector(".about");e.getBoundingClientRect().top,window.innerHeight}
+function activeMenu(){var e=document.querySelector("#about"),t=document.querySelector(".about");e.getBoundingClientRect().top<window.innerHeight-300&&(t.classList.remove("active"),t.classList.add("active"))}

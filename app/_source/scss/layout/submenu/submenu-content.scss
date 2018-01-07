@@ -16,7 +16,7 @@
     @media #{$medium} {
 		background: $purple-one-light;
 		border-radius: 0;
-	    height: 71px;
+	    height: 68px;
     	left: 0;
 	    max-width: 100%;
 	    opacity: 1;
@@ -204,7 +204,7 @@
 		display: block;
 		transition: all .5s ease-in-out;
 
-		&:hover {
+		&:hover, &.active {
 			background: $white-one-light;
 			color: $gray-one;
 		}

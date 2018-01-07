@@ -72,7 +72,7 @@
 
 @media (min-width: 768px) { .title__page:before, .title__page:after { color: #5f3889; }
   .title__page { background: none; border-radius: 0; border-bottom: 4px solid #5f3889; color: #5f3889; margin-top: 70px; }
-  .submenu__nav { background: #5f3889; border-radius: 0; height: 71px; left: 0; max-width: 100%; opacity: 1; padding: 0; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; top: -999px; width: 100%; z-index: 1; }
+  .submenu__nav { background: #5f3889; border-radius: 0; height: 68px; left: 0; max-width: 100%; opacity: 1; padding: 0; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; top: -999px; width: 100%; z-index: 1; }
   .submenu__nav .container { -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding: 0 .5em; }
   .submenu__logo { display: block; }
   .open__menu, .close__menu { display: none; }
@@ -82,7 +82,7 @@
   .submenu__item { min-width: 100px; position: relative; }
   .submenu__item:nth-child(2), .submenu__item:nth-child(3), .submenu__item:nth-child(4), .submenu__item:nth-child(5), .submenu__item:nth-child(6), .submenu__item:nth-child(7) { left: auto; right: auto; top: auto; }
   .submenu__link, .submenu__icon__mobile { background: none; color: #fff; display: block; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }
-  .submenu__link:hover, .submenu__icon__mobile:hover { background: #fff; color: #3a3e40; }
+  .submenu__link:hover, .submenu__link.active, .submenu__icon__mobile:hover, .submenu__icon__mobile.active { background: #fff; color: #3a3e40; }
   .submenu__icon__mobile { display: none; }
   .about__wrapper { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
   .about__content__image, .about__content__description { max-width: 100%; padding: 0; width: 49%; }
