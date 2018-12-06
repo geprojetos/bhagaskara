@@ -1,2 +1,3 @@
 app/_source/compilado/**/*
 server/node_modules/**/*
+server/package-lock.json
