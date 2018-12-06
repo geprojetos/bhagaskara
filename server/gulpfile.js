@@ -17,7 +17,7 @@ var gulp            = require("gulp"),
 
 gulp.task("clean", function(){
 
-    gulp.src(["../app/_public", "../app/_source/compilado"])
+    gulp.src(["../app/docs", "../app/_source/compilado"])
     .pipe(clean({force: true}));
 });
 
@@ -26,11 +26,11 @@ gulp.task("server", function(){
 
     browserSync.init({
         server: {
-            baseDir: "../app/_public"
+            baseDir: "../app/docs"
         }
     });
 
-    gulp.watch("../app/_public/**/*").on("change", browserSync.reload);
+    gulp.watch("../app/docs/**/*").on("change", browserSync.reload);
     gulp.watch("../app/_source/**/*.jade", ["jade"]);
     gulp.watch("../app/_source/**/*.scss", ["sass"]);
     // gulp.watch("../app/_source/js/*.js", ["js"]);
@@ -89,7 +89,7 @@ gulp.task("sass", function(){
 gulp.task("img", function(){
 
     gulp.src("../app/_source/img/*")
-        .pipe(gulp.dest("../app/_public/img"))
+        .pipe(gulp.dest("../app/docs/img"))
 });
 
 
@@ -100,7 +100,7 @@ gulp.task('sprite', function () {
             imgName: 'sprite.png',  //nome sprite gerado
             cssName: 'sprite.css'   // nome css do sprite
         }));
-        spriteData.img.pipe(gulp.dest('../app/_public/img/sprite'));
+        spriteData.img.pipe(gulp.dest('../app/docs/img/sprite'));
         spriteData.css.pipe(gulp.dest('../app/_source/cssSprite'));
 });
 
@@ -111,7 +111,7 @@ gulp.task("build-html", function(){
         .pipe(useref())
         .pipe(inlinesource())
         .pipe(gulpif('*.js', uglify()))
-        .pipe(gulp.dest("../app/_public"))
+        .pipe(gulp.dest("../app/docs"))
 });
 
 
@@ -137,7 +137,7 @@ gulp.task("build-js", function(){
 gulp.task("build-fonts", function(){
 
     gulp.src("../app/_source/fonts/**/*")
-    .pipe(gulp.dest("../app/_public/fonts"));
+    .pipe(gulp.dest("../app/docs/fonts"));
 });
 
 
@@ -145,7 +145,7 @@ gulp.task("build-vendor", function(){
 
     gulp.src("../app/_source/vendor/*.js")
     .pipe(uglify())
-    .pipe(gulp.dest("../app/_public/vendor"))
+    .pipe(gulp.dest("../app/docs/vendor"))
 });
 
 

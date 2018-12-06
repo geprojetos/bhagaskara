@@ -100,9 +100,9 @@ html, body, .header { height: 100%; }
 
 .header__menu__item, .header__menu__link, .header__icon--down { color: #f1f0f1; }
 
-.header__menu__lista { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; text-align: center; }
+.header__menu__lista { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; text-align: center; }
 
-.header__menu__item { background: rgba(95, 56, 137, 0.9); border: 2px solid rgba(255, 255, 255, 0); border-radius: .5em; margin: .2em; padding: 1em 1.6em; -webkit-transition: all .5s; transition: all .5s; width: 100px; }
+.header__menu__item { background: rgba(95, 56, 137, 0.9); border: 2px solid rgba(255, 255, 255, 0); border-radius: .5em; margin: .2em; padding: 1em 1.6em; transition: all .5s; width: 100px; }
 
 .header__menu__item span { display: block; }
 
@@ -117,7 +117,7 @@ html, body, .header { height: 100%; }
 @media (min-width: 400px) { .header { background-image: url("img/destaque-header-medium.jpeg"); } }
 
 @media (min-width: 768px) { .container { max-width: 768px; }
-  .tooltip { position: relative; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }
+  .tooltip { position: relative; transition: all .5s ease-in-out; }
   .tooltip:hover:before { background: black; bottom: 70px; content: ""; height: 1em; position: absolute; -webkit-transform: translate(15%, 40%) rotate(45deg); -ms-transform: translate(15%, 40%) rotate(45deg); transform: translate(15%, 40%) rotate(45deg); width: 1em; }
   .tooltip:hover:after { background: black; border-radius: .5em; content: attr(data-tooltip); font-size: .6em; position: absolute; right: 50%; text-align: center; top: -150%; -webkit-transform: translateX(50%); -ms-transform: translateX(50%); transform: translateX(50%); width: 300%; }
   html { font-size: 106%; /*17px*/ }
