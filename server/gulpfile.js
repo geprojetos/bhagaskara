@@ -37,6 +37,7 @@ gulp.task("server", function(){
     gulp.watch("../app/_source/img/*", ["img"]);
     gulp.watch("../app/_source/img/sprite/*.png", ["sprite"]);
     gulp.watch('../app/_source/offline.manifest', ['build-offline-manifest']);
+    gulp.watch('../app/_source/js/sw/*.js', ['build-sw']);
 
     gulp.watch("../app/_source/compilado/*.html", ["build-html"]);
     gulp.watch("../app/_source/compilado/css/*.css", ["build-css", "build-html"]);
@@ -126,12 +127,17 @@ gulp.task("build-css", function(){
 
 gulp.task("build-js", function(){
 
-    return gulp.src("../app/_source/js/**/*.js")
+    return gulp.src(["../app/_source/js/*.js", "../app/_source/js/sw/*.js"])
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
         .pipe(plumber())
         .pipe(uglify())
         .pipe(gulp.dest("../app/_source/compilado/js"))
+});
+
+gulp.task('build-sw', function() {
+    return gulp.src('../app/_source/js/sw/sw.js')
+        .pipe(gulp.dest('../docs/js/sw'));
 });
 
 
@@ -160,6 +166,6 @@ gulp.task("comp", ["jade", "sass"]);
 
 gulp.task("images", ["img", "sprite"]);
 
-gulp.task("build", ["build-html", "build-css", "build-js", "build-fonts", "build-vendor", 'build-offline-manifest']);
+gulp.task("build", ["build-html", "build-css", "build-js", "build-fonts", "build-vendor", 'build-offline-manifest', 'build-sw']);
 
 gulp.task("default", ["comp", "build", "images", "server"]);

@@ -21,6 +21,8 @@ vendor/cssrelpreload.js
 vendor/loadcss.js
 js/onscroll.js
 js/onresize.js
+js/sw/sw-registra.js
+js/sw/sw.js
 
 NETWORK:
 *

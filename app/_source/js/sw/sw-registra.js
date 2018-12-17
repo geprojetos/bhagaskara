@@ -1,1 +1,3 @@
-navigator.serviceWorker.register('sw.js');
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('js/sw/sw.js');
+}
