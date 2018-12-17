@@ -126,7 +126,7 @@ gulp.task("build-css", function(){
 
 gulp.task("build-js", function(){
 
-    return gulp.src("../app/_source/js/*.js")
+    return gulp.src("../app/_source/js/**/*.js")
         .pipe(jshint())
         .pipe(jshint.reporter(jsStylish))
         .pipe(plumber())
