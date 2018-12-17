@@ -36,6 +36,7 @@ gulp.task("server", function(){
     // gulp.watch("../app/_source/js/*.js", ["js"]);
     gulp.watch("../app/_source/img/*", ["img"]);
     gulp.watch("../app/_source/img/sprite/*.png", ["sprite"]);
+    gulp.watch('../app/_source/offline.manifest', ['build-offline-manifest']);
 
     gulp.watch("../app/_source/compilado/*.html", ["build-html"]);
     gulp.watch("../app/_source/compilado/css/*.css", ["build-css", "build-html"]);
@@ -148,11 +149,17 @@ gulp.task("build-vendor", function(){
     .pipe(gulp.dest("../docs/vendor"))
 });
 
+gulp.task('build-offline-manifest', function() {
+
+    return gulp.src('../app/_source/offline.manifest')
+        .pipe(gulp.dest('../docs'))
+});
+
 
 gulp.task("comp", ["jade", "sass"]);
 
 gulp.task("images", ["img", "sprite"]);
 
-gulp.task("build", ["build-html", "build-css", "build-js", "build-fonts", "build-vendor"]);
+gulp.task("build", ["build-html", "build-css", "build-js", "build-fonts", "build-vendor", 'build-offline-manifest']);
 
 gulp.task("default", ["comp", "build", "images", "server"]);

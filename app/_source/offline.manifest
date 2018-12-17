@@ -1,0 +1,24 @@
+CACHE MANIFEST
+
+CACHE:
+fonts/Roboto/Roboto-Regular.ttf
+fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf
+
+fonts/icomoon/fonts/icomoon.ttf
+fonts/icomoon/fonts/icomoon.woff
+
+img/favicon.png
+img/destaque-header-small.jpeg
+img/destaque-header-medium.jpeg
+img/destaque-header-large.jpeg
+img/about-devices.png
+
+css/style.css
+
+vendor/cssrelpreload.js
+vendor/loadcss.js
+js/onscroll.js
+js/onresize.js
+
+NETWORK:
+*
